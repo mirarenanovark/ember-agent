@@ -1,0 +1,25 @@
+model:
+  provider: 9router
+  default: glmflash
+  base_url: https://zergling.tail28e85.ts.net/v1
+
+providers:
+  9router:
+    api_key_env: NINEROUTER_API_KEY
+    base_url: https://zergling.tail28e85.ts.net/v1
+    default_model: glmflash
+
+agent:
+  max_turns: 150
+
+compression:
+  provider: 9router
+  model: glm/glm-5.3-flash
+  base_url: https://zergling.tail28e85.ts.net/v1
+  api_key_env: NINEROUTER_API_KEY
+  timeout: 120
+
+delegation:
+  model: glmflash
+  provider: 9router
+  base_url: https://zergling.tail28e85.ts.net/v1
